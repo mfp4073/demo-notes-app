@@ -60,6 +60,9 @@ importers:
       aws-sdk:
         specifier: ^2.1480.0
         version: 2.1480.0
+      stripe:
+        specifier: ^14.1.0
+        version: 14.1.0
       uuid:
         specifier: ^9.0.1
         version: 9.0.1
@@ -107,14 +110,14 @@ packages:
   /@aws-cdk/asset-node-proxy-agent-v6@2.0.1:
     resolution: {integrity: sha512-DDt4SLdLOwWCjGtltH4VCST7hpOI5DzieuhGZsBpZ+AgJdSI2GCjklCXm0GCTwJG/SolkL5dtQXyUKgg9luBDg==}
 
-  /@aws-cdk/aws-apigatewayv2-alpha@2.101.1-alpha.0(aws-cdk-lib@2.101.1)(constructs@10.2.69):
+  /@aws-cdk/aws-apigatewayv2-alpha@2.101.1-alpha.0(aws-cdk-lib@2.95.1)(constructs@10.2.69):
     resolution: {integrity: sha512-nDdxdcJ97jC80F8dxO+wH2ufkq0w2hfsZ3RZKrdGo913/BPO2ebBSowFykpKSl2cPqm4g5NwoUIGZcawvGcpGQ==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       aws-cdk-lib: ^2.101.1
       constructs: ^10.0.0
     dependencies:
-      aws-cdk-lib: 2.101.1(constructs@10.2.69)
+      aws-cdk-lib: 2.95.1(constructs@10.2.69)
       constructs: 10.2.69
     dev: true
 
@@ -126,7 +129,7 @@ packages:
       aws-cdk-lib: ^2.101.1
       constructs: ^10.0.0
     dependencies:
-      '@aws-cdk/aws-apigatewayv2-alpha': 2.101.1-alpha.0(aws-cdk-lib@2.101.1)(constructs@10.2.69)
+      '@aws-cdk/aws-apigatewayv2-alpha': 2.101.1-alpha.0(aws-cdk-lib@2.95.1)(constructs@10.2.69)
       aws-cdk-lib: 2.101.1(constructs@10.2.69)
       constructs: 10.2.69
     dev: true
@@ -139,7 +142,7 @@ packages:
       aws-cdk-lib: ^2.101.1
       constructs: ^10.0.0
     dependencies:
-      '@aws-cdk/aws-apigatewayv2-alpha': 2.101.1-alpha.0(aws-cdk-lib@2.101.1)(constructs@10.2.69)
+      '@aws-cdk/aws-apigatewayv2-alpha': 2.101.1-alpha.0(aws-cdk-lib@2.95.1)(constructs@10.2.69)
       aws-cdk-lib: 2.101.1(constructs@10.2.69)
       constructs: 10.2.69
     dev: true
@@ -2777,7 +2780,6 @@ packages:
     resolution: {integrity: sha512-21TKHHh3eUHIi2MloeptJWALuCu5H7HQTdTrWIFReA8ad+aggoX+lRes3ex7/FtpC+sVUpFMQ+QTfYr74mruiQ==}
     dependencies:
       undici-types: 5.25.3
-    dev: true
 
   /@types/uuid@9.0.6:
     resolution: {integrity: sha512-BT2Krtx4xaO6iwzwMFUYvWBWkV2pr37zD68Vmp1CDV196MzczBRxuEpD6Pr395HAgebC/co7hOphs53r8V7jew==}
@@ -4827,7 +4829,6 @@ packages:
 
   /object-inspect@1.13.1:
     resolution: {integrity: sha512-5qoj1RUiKOMsCCNLV1CBiPYE10sziTsnmNxkAI/rZhiD63CF7IqdFGC/XzjWjpSgLf0LxXX3bDFIh0E18f6UhQ==}
-    dev: true
 
   /obliterator@2.0.4:
     resolution: {integrity: sha512-lgHwxlxV1qIg1Eap7LgIeoBWIMFibOjbrYPIPJZcI1mmGAI2m3lNYpK12Y+GBdPQ0U1hRwSord7GIaawz962qQ==}
@@ -5044,7 +5045,6 @@ packages:
     engines: {node: '>=0.6'}
     dependencies:
       side-channel: 1.0.4
-    dev: true
 
   /querystring@0.2.0:
     resolution: {integrity: sha512-X/xY82scca2tau62i9mDyU9K+I+djTMUsvwf7xnUX5GLvVzgJybOJf4Y6o9Zx3oJK/LSXg5tTZBjwzqVPaPO2g==}
@@ -5263,7 +5263,6 @@ packages:
       call-bind: 1.0.5
       get-intrinsic: 1.2.1
       object-inspect: 1.13.1
-    dev: true
 
   /siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
@@ -5334,7 +5333,7 @@ packages:
       '@sls-next/lambda-at-edge':
         optional: true
     dependencies:
-      '@aws-cdk/aws-apigatewayv2-alpha': 2.101.1-alpha.0(aws-cdk-lib@2.101.1)(constructs@10.2.69)
+      '@aws-cdk/aws-apigatewayv2-alpha': 2.101.1-alpha.0(aws-cdk-lib@2.95.1)(constructs@10.2.69)
       '@aws-cdk/aws-apigatewayv2-authorizers-alpha': 2.101.1-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.101.1-alpha.0)(aws-cdk-lib@2.101.1)(constructs@10.2.69)
       '@aws-cdk/aws-apigatewayv2-integrations-alpha': 2.101.1-alpha.0(@aws-cdk/aws-apigatewayv2-alpha@2.101.1-alpha.0)(aws-cdk-lib@2.101.1)(constructs@10.2.69)
       '@aws-cdk/cloud-assembly-schema': 2.101.1
@@ -5500,6 +5499,14 @@ packages:
       acorn: 8.10.0
     dev: true
 
+  /stripe@14.1.0:
+    resolution: {integrity: sha512-hpI8OT7jbaVTGOm9bqeCbdVGwM/55Hetn+WpPGFSq7FmlnqLPB7CSZy2eNYU6ko+4tdur6ZMrDKS6wh1CCx8bw==}
+    engines: {node: '>=12.*'}
+    dependencies:
+      '@types/node': 20.8.7
+      qs: 6.11.0
+    dev: false
+
   /strnum@1.0.5:
     resolution: {integrity: sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==}
     dev: true
@@ -5626,7 +5633,6 @@ packages:
 
   /undici-types@5.25.3:
     resolution: {integrity: sha512-Ga1jfYwRn7+cP9v8auvEXN1rX3sWqlayd4HP7OKk4mZWylEmu3KzXDUGrQUN6Ol7qo1gPvB2e5gX6udnyEPgdA==}
-    dev: true
 
   /undici@5.26.4:
     resolution: {integrity: sha512-OG+QOf0fTLtazL9P9X7yqWxQ+Z0395Wk6DSkyTxtaq3wQEjIroVe7Y4asCX/vcCxYpNGMnwz8F0qbRYUoaQVMw==}
