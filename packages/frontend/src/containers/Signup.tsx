@@ -71,81 +71,81 @@ export default function Signup() {
       <Form onSubmit={handleConfirmationSubmit} >
         <Stack gap={3}>
           <Form.Group controlId="confirmationCode" >
-            <Form.Label>Confirmation Code < /Form.Label>
-              < Form.Control
-                size="lg"
-                autoFocus
-                type="tel"
-                onChange={handleFieldChange}
-                value={fields.confirmationCode}
-              />
-              <Form.Text muted > Please check your email for the code.< /Form.Text>
-                < /Form.Group>
-                < LoaderButton
-                  size="lg"
-                  type="submit"
-                  variant="success"
-                  isLoading={isLoading}
-                  disabled={!validateConfirmationForm()
-                  }
-                >
-                  Verify
-                  < /LoaderButton>
-                  < /Stack>
-                  < /Form>
-                  );
-  }
+            <Form.Label>Confirmation Code </Form.Label>
+            <Form.Control
+              size="lg"
+              autoFocus
+              type="tel"
+              onChange={handleFieldChange}
+              value={fields.confirmationCode}
+            />
+            <Form.Text muted > Please check your email for the code.</Form.Text>
+          </Form.Group>
+          <LoaderButton
+            size="lg"
+            type="submit"
+            variant="success"
+            isLoading={isLoading}
+            disabled={!validateConfirmationForm()
+            }
+          >
+            Verify
+          </LoaderButton>
+        </Stack>
+      </Form>
 
-                  function renderForm() {
+    );
+  }
+  function renderForm() {
     return (
-                  <Form onSubmit={handleSubmit} >
-                    <Stack gap={3}>
-                      <Form.Group controlId="email" >
-                        <Form.Label>Email < /Form.Label>
-                          < Form.Control
-                            size="lg"
-                            autoFocus
-                            type="email"
-                            value={fields.email}
-                            onChange={handleFieldChange}
-                          />
-                      </Form.Group>
-                      < Form.Group controlId="password" >
-                        <Form.Label>Password < /Form.Label>
-                          < Form.Control
-                            size="lg"
-                            type="password"
-                            value={fields.password}
-                            onChange={handleFieldChange}
-                          />
-                      </Form.Group>
-                      < Form.Group controlId="confirmPassword" >
-                        <Form.Label>Confirm Password < /Form.Label>
-                          < Form.Control
-                            size="lg"
-                            type="password"
-                            onChange={handleFieldChange}
-                            value={fields.confirmPassword}
-                          />
-                      </Form.Group>
-                      < LoaderButton
-                        size="lg"
-                        type="submit"
-                        variant="success"
-                        isLoading={isLoading}
-                        disabled={!validateForm()
-                        }
-                      >
-                        Signup
-                        < /LoaderButton>
-                        < /Stack>
-                        < /Form>
-                        );
+      <Form onSubmit={handleSubmit} >
+        <Stack gap={3}>
+          <Form.Group controlId="email" >
+            <Form.Label>Email </Form.Label>
+            < Form.Control
+              size="lg"
+              autoFocus
+              type="email"
+              value={fields.email}
+              onChange={handleFieldChange}
+            />
+          </Form.Group>
+          < Form.Group controlId="password" >
+            <Form.Label>Password </Form.Label>
+            < Form.Control
+              size="lg"
+              type="password"
+              value={fields.password}
+              onChange={handleFieldChange}
+            />
+          </Form.Group>
+          < Form.Group controlId="confirmPassword" >
+            <Form.Label>Confirm Password </Form.Label>
+            < Form.Control
+              size="lg"
+              type="password"
+              onChange={handleFieldChange}
+              value={fields.confirmPassword}
+            />
+          </Form.Group>
+          < LoaderButton
+            size="lg"
+            type="submit"
+            variant="success"
+            isLoading={isLoading}
+            disabled={!validateForm()
+            }
+          >
+            Signup
+          </LoaderButton>
+        </Stack>
+      </Form>
+    );
   }
 
-                        return (
-                        <div className="Signup" >
-                          {newUser === null ? renderForm() : renderConfirmationForm()}
-                        </div>
-                        );
+  return (
+    <div className="Signup" >
+      {newUser === null ? renderForm() : renderConfirmationForm()}
+    </div>
+  );
 }
